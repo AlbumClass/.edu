@@ -2,13 +2,16 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <title>Album Class</title>
+  <!-- Fuentes y Iconos -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,500&display=swap">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+  <!-- CSS Extendido -->
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+  <!-- HEADER -->
   <header class="header">
     <button class="menu-btn" aria-label="Menú">
       <i class="fas fa-bars"></i>
@@ -29,14 +32,14 @@
       <button class="add-btn" aria-label="Añadir">
         <i class="fas fa-plus"></i>
       </button>
-      <small class="section-info">crear una sección, unirse o subir foto sin clase</small>
+      <small class="section-info">Presiona</small>
       <button class="profile-btn" aria-label="Perfil">
         <i class="fas fa-user-circle"></i>
       </button>
     </div>
   </header>
 
-  <!-- Sidebar desplegable -->
+  <!-- SIDEBAR (Menu Lateral Responsive) -->
   <aside class="sidebar">
     <nav>
       <div class="nav-item" data-view="home">
@@ -62,11 +65,12 @@
     </nav>
   </aside>
 
+  <!-- MAIN CONTENT -->
   <main class="main-content" id="mainContent">
-    <!-- Contenido dinámico se cargará aquí -->
+    <!-- Aquí se cargará contenido dinámico (vistas: Inicio, Calendario, Clases, etc.) -->
   </main>
 
-  <!-- Modal para opciones de sección (Crear/Unirse/Subir foto sin clase) -->
+  <!-- MODAL: Opciones Principales (Crear/Unirse/Subir Foto sin Clase) -->
   <div id="sectionModal" class="modal hidden">
     <div class="modal-content">
       <span class="close" id="sectionModalClose" aria-label="Cerrar">&times;</span>
@@ -79,7 +83,7 @@
     </div>
   </div>
 
-  <!-- Modal para subir foto en una sección (con clase) -->
+  <!-- MODAL: Subir Foto en Sección -->
   <div id="photoModal" class="modal hidden">
     <div class="modal-content">
       <span class="close" id="photoModalClose" aria-label="Cerrar">&times;</span>
@@ -100,7 +104,7 @@
     </div>
   </div>
 
-  <!-- Modal para subir foto sin clase (solo en Inicio) -->
+  <!-- MODAL: Subir Foto sin Clase (Para Inicio) -->
   <div id="photoNoClassModal" class="modal hidden">
     <div class="modal-content">
       <span class="close" id="photoNoClassModalClose" aria-label="Cerrar">&times;</span>
@@ -125,21 +129,24 @@
     </div>
   </div>
 
-  <!-- Modal para vista previa ampliada de foto -->
+  <!-- MODAL: Vista Previa Ampliada de Foto (Zoom y Panning) -->
   <div id="photoPreviewModal" class="modal hidden">
     <div class="modal-content preview-content">
       <span class="close" id="photoPreviewModalClose" aria-label="Cerrar">&times;</span>
       <div class="modal-body" id="photoPreviewBody">
-        <!-- La foto ampliada se insertará aquí -->
         <img id="previewImage" src="" alt="">
         <p id="previewDescription"></p>
       </div>
     </div>
   </div>
 
-  <!-- Contenedor para dropdowns (menús contextuales) -->
+  <!-- Contenedor para Dropdowns (Menús Contextuales) -->
   <div id="dropdownContainer"></div>
+  
+  <!-- Contenedor para Toast Notifications -->
+  <div id="toast" class="toast"></div>
 
+  <!-- Script principal -->
   <script src="js/script.js"></script>
 </body>
 </html>

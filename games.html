@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Juegos Académicos | Catálogo</title>
+  <meta name="description" content="Catálogo de juegos educativos: elige entre múltiples desafíos en solitario o multijugador."/>
+  <link rel="stylesheet" href="css/games.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <h1 class="site-title">Juegos Académicos</h1>
+    </div>
+  </header>
+
+  <main class="main-content container">
+    <!-- 1) Catálogo de juegos -->
+    <section id="catalog" class="catalog">
+      <h2 class="catalog__title">Juegos Disponibles</h2>
+      <div class="catalog__grid">
+        <!-- Desafío Numérico -->
+        <div class="game-card">
+          <img src="img/foi.jpg.crdownload" alt="Vista previa Desafío Numérico" class="game-card__img"/>
+          <div class="game-card__body">
+            <h3 class="game-card__title">Desafío Numérico</h3>
+            <p class="game-card__desc">
+              Pon a prueba tus habilidades matemáticas: resuelve el objetivo usando operaciones básicas.  
+              Modo solitario y 2 jugadores.
+            </p>
+            <button class="game-card__btn" data-game="numeric">Jugar</button>
+          </div>
+        </div>
+        <!-- Aquí podrías añadir más tarjetas para otros juegos -->
+      </div>
+    </section>
+
+    <!-- 2) Sección del Desafío Numérico (inicialmente oculta) -->
+    <section id="game-numeric" class="game-section hidden" aria-live="polite">
+      <button id="back-to-catalog" class="btn btn--link">&larr; Volver al catálogo</button>
+      <h2 class="game-section__title">Desafío Numérico</h2>
+
+      <div class="menu">
+        <label for="difficulty">Dificultad:</label>
+        <select id="difficulty">
+          <option value="easy">Fácil</option>
+          <option value="medium" selected>Medio</option>
+          <option value="hard">Difícil</option>
+        </select>
+        <button id="start-single" class="btn btn--primary">Jugar Solo</button>
+        <button id="start-multi" class="btn btn--secondary">2 Jugadores</button>
+      </div>
+
+      <div class="game hidden" id="numeric-game">
+        <div class="game__header">
+          <div class="players hidden" id="players-container">
+            <div class="player current" id="player1">Jugador 1: <span id="score1">0</span> pts</div>
+            <div class="player" id="player2">Jugador 2: <span id="score2">0</span> pts</div>
+          </div>
+          <div class="target">Objetivo: <span id="target">0</span></div>
+          <div class="timer">
+            <div class="timer__bar"><div id="timer-bar"></div></div>
+            <span id="timer">00:00</span>
+          </div>
+        </div>
+
+        <div class="board" id="game-board"></div>
+
+        <div class="controls">
+          <div class="operations">
+            <button class="op-btn" data-op="+">+</button>
+            <button class="op-btn" data-op="-">−</button>
+            <button class="op-btn" data-op="×">×</button>
+            <button class="op-btn" data-op="÷">÷</button>
+          </div>
+          <div class="actions">
+            <button id="clear-selection" class="btn btn--light">Limpiar</button>
+            <button id="calculate" class="btn btn--primary">Calcular</button>
+            <button id="new-round" class="btn btn--secondary">Nueva Ronda</button>
+          </div>
+        </div>
+
+        <div class="message">
+          <p id="calculation-display" class="message__calc"></p>
+          <p id="result-message" class="message__result"></p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; 2025 Mi Plataforma Académica</p>
+    </div>
+  </footer>
+
+  <script src="js/games.js" defer></script>
+</body>
+</html>

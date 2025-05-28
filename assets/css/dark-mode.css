@@ -1,0 +1,728 @@
+/* =====================================================
+    ESTILOS PARA MODO OSCURO BASADOS EN TU CSS NORMAL
+==================================================== */
+:root {
+    --dark-background: #121212; /* Negro suave como fondo principal */
+    --dark-card-bg: #1E1E1E; /* Gris muy oscuro para tarjetas y contenedores */
+    --dark-text-primary: #F5F5F5; /* Blanco hueso para texto principal */
+    --dark-text-secondary: #BDBDBD; /* Gris claro para texto secundario */
+    --dark-accent: #80CBC4; /* Verde azulado suave como acento */
+    --dark-primary: #64B5F6; /* Azul claro como primario */
+    --dark-primary-dark: #42A5F5; /* Azul un poco más oscuro */
+    --dark-primary-light: #90CAF9; /* Azul aún más claro */
+    --dark-border-light: #424242; /* Gris oscuro para bordes */
+    --dark-shadow-sm: 0 1px 3px rgba(0,0,0,0.5);
+    --dark-shadow-md: 0 2px 6px rgba(0,0,0,0.6);
+    --dark-shadow-lg: 0 4px 12px rgba(0,0,0,0.7);
+    --dark-nav-item-hover: #2E2E2E; /* Gris oscuro para el hover del nav item */
+}
+
+body.dark-mode {
+    background-color: var(--dark-background);
+    color: var(--dark-text-primary);
+}
+
+body.dark-mode a {
+    color: var(--dark-primary-light);
+}
+
+body.dark-mode a:hover {
+    color: var(--dark-accent);
+}
+
+body.dark-mode h1,
+body.dark-mode h2,
+body.dark-mode h3,
+body.dark-mode h4,
+body.dark-mode h5,
+body.dark-mode h6 {
+    color: var(--dark-primary-light);
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+body.dark-mode p {
+    color: var(--dark-text-secondary);
+}
+
+body.dark-mode .header {
+    background-color: var(--dark-card-bg);
+    box-shadow: var(--dark-shadow-md);
+    border-bottom-color: var(--dark-border-light);
+    backdrop-filter: blur(10px); /* Ajuste de desenfoque */
+}
+
+body.dark-mode .header:hover {
+    box-shadow: var(--dark-shadow-lg);
+}
+
+body.dark-mode .menu-btn {
+    color: var(--dark-primary-light);
+}
+
+body.dark-mode .menu-btn:hover {
+    color: var(--dark-accent);
+}
+
+body.dark-mode .logo {
+    color: var(--dark-primary-light);
+    text-shadow: none; /* Eliminar la sombra en oscuro puede mejorar la legibilidad */
+}
+
+body.dark-mode .logo:hover {
+    text-shadow: 0 2px 8px rgba(100, 181, 246, 0.6); /* Sombra más oscura */
+}
+
+body.dark-mode .search-bar {
+    background-color: #333333; /* Gris oscuro para la barra de búsqueda */
+    color: var(--dark-text-primary);
+    border-color: var(--dark-border-light);
+    box-shadow: var(--dark-shadow-sm);
+}
+
+body.dark-mode .search-bar:focus {
+    border-color: var(--dark-accent);
+    box-shadow: 0 0 0 3px rgba(128, 203, 196, 0.3);
+    background-color: #424242; /* Un poco más claro al enfocar */
+    color: var(--dark-text-primary); /* Asegurar que el texto sea legible al enfocar */
+}
+
+body.dark-mode .search-bar::placeholder {
+    color: var(--dark-text-light);
+}
+
+body.dark-mode .search-btn {
+    color: var(--dark-primary-light);
+}
+
+body.dark-mode .search-btn:hover {
+    color: var(--dark-accent);
+}
+
+body.dark-mode .add-btn,
+body.dark-mode .profile-btn {
+    color: var(--dark-primary-light);
+}
+
+body.dark-mode .add-btn:hover,
+body.dark-mode .profile-btn:hover {
+    color: var(--dark-accent);
+}
+
+body.dark-mode .section-info {
+    color: var(--dark-text-light);
+}
+
+body.dark-mode .sidebar {
+    background: var(--dark-card-bg);
+    box-shadow: var(--dark-shadow-md);
+    border-right-color: var(--dark-border-light);
+}
+
+body.dark-mode .sidebar:hover {
+    box-shadow: var(--dark-shadow-lg);
+}
+
+body.dark-mode .nav-item {
+    color: var(--dark-text-secondary);
+    border-bottom-color: #333333; /* Un tono más oscuro */
+}
+
+body.dark-mode .nav-item::before {
+    background-color: var(--dark-accent);
+}
+
+body.dark-mode .nav-item i {
+    color: var(--dark-text-secondary);
+}
+
+body.dark-mode .nav-item:hover,
+body.dark-mode .nav-item.active {
+    background: var(--dark-nav-item-hover); /* Usando la variable para un color gris oscuro */
+    color: var(--dark-primary-light);
+}
+
+body.dark-mode .main-content {
+    /* El fondo ya está oscuro por el body */
+}
+
+body.dark-mode .classes-grid {
+    /* El fondo ya está oscuro por el main-content */
+    padding: 20px; /* Mantener el padding */
+}
+
+body.dark-mode .class-card {
+    background: var(--dark-card-bg);
+    box-shadow: var(--dark-shadow-md);
+    border-color: var(--dark-border-light);
+}
+
+body.dark-mode .class-card:hover {
+    box-shadow: var(--dark-shadow-lg);
+}
+
+body.dark-mode .class-header {
+    color: var(--dark-text-primary);
+}
+
+body.dark-mode .class-content {
+    color: var(--dark-text-secondary);
+}
+
+body.dark-mode .thumbnails img {
+    box-shadow: var(--dark-shadow-sm);
+    background-color: var(--dark-background); /* Asegurar un fondo oscuro si la imagen es transparente */
+}
+
+body.dark-mode .class-footer {
+    border-top-color: var(--dark-border-light);
+    background-color: #272727; /* Un tono más oscuro */
+    color: var(--dark-text-secondary);
+}
+
+body.dark-mode .class-card:hover .class-footer {
+    background-color: #333333; /* Aún más oscuro al hacer hover */
+}
+
+body.dark-mode .section-detail {
+    background: var(--dark-card-bg);
+    box-shadow: var(--dark-shadow-md);
+    border-color: var(--dark-border-light);
+}
+
+body.dark-mode .section-detail:hover {
+    box-shadow: var(--dark-shadow-lg);
+}
+
+body.dark-mode .section-detail::before {
+    background: linear-gradient(90deg, var(--dark-primary-light) 0%, var(--dark-accent) 100%);
+}
+
+body.dark-mode .section-header h2 {
+    color: var(--dark-primary-light);
+}
+
+body.dark-mode .section-header h2::after {
+    background-color: var(--dark-accent);
+}
+
+body.dark-mode .section-detail p.tema {
+    color: var(--dark-text-light);
+}
+
+body.dark-mode .section-detail:hover p.tema {
+    color: var(--dark-primary-dark);
+}
+
+/* =====================================================
+    CALENDARIO (Basado en tu CSS)
+==================================================== */
+body.dark-mode .calendar-header {
+    background: var(--dark-card-bg);
+    box-shadow: var(--dark-shadow-md);
+}
+
+body.dark-mode .calendar-header:hover {
+    box-shadow: var(--dark-shadow-lg);
+}
+
+body.dark-mode .cal-nav-btn {
+    color: var(--dark-primary-light);
+}
+
+body.dark-mode .cal-nav-btn:hover {
+    color: var(--dark-accent);
+}
+
+body.dark-mode .calendar-weekdays {
+    background: #272727; /* Tono gris oscuro */
+}
+
+body.dark-mode .weekday {
+    color: var(--dark-primary-light);
+}
+
+body.dark-mode .weekday:hover {
+    color: var(--dark-accent);
+}
+
+body.dark-mode .calendar-grid {
+    background: var(--dark-card-bg);
+    box-shadow: var(--dark-shadow-sm);
+    border-bottom-color: var(--dark-border-light);
+}
+
+body.dark-mode .calendar-grid:hover {
+    box-shadow: var(--dark-shadow-md);
+}
+
+body.dark-mode .calendar-day {
+    border-color: var(--dark-border-light);
+    background: var(--dark-background);
+    color: var(--dark-text-secondary);
+}
+
+body.dark-mode .calendar-day:hover {
+    border-color: var(--dark-accent);
+    background-color: #333333; /* Un tono gris más claro al hacer hover */
+    box-shadow: var(--dark-shadow-sm);
+    color: var(--dark-text-primary);
+}
+
+body.dark-mode .calendar-day.other-month {
+    color: var(--dark-text-light);
+}
+
+body.dark-mode .calendar-day .date {
+    color: var(--dark-text-light);
+}
+
+body.dark-mode .calendar-day:hover .date {
+    color: var(--dark-accent);
+}
+
+body.dark-mode .event-info {
+    background: var(--dark-accent);
+    color: var(--dark-background);
+    box-shadow: var(--dark-shadow-sm);
+}
+
+body.dark-mode .event-info:hover {
+    background: #4DB6AC; /* Un tono más oscuro del acento al hacer hover */
+    box-shadow: var(--dark-shadow-md);
+}
+
+/* =====================================================
+    MODALES Y VISTA PREVIA (Basado en tu CSS)
+==================================================== */
+body.dark-mode .modal {
+    background: rgba(0,0,0,0.85); /* Fondo más oscuro */
+    backdrop-filter: blur(12px);
+}
+
+body.dark-mode .modal-content {
+    background: var(--dark-card-bg);
+    box-shadow: var(--dark-shadow-lg);
+}
+
+body.dark-mode .modal-content img {
+    box-shadow: var(--dark-shadow-md);
+    background-color: var(--dark-background); /* Asegurar fondo oscuro */
+}
+
+body.dark-mode .modal-content .close {
+    color: var(--dark-primary-light);
+    background: var(--dark-primary);
+    box-shadow: var(--dark-shadow-md);
+}
+
+body.dark-mode .modal-content .close:hover {
+    background: var(--dark-primary-dark);
+    color: var(--dark-accent);
+    box-shadow: var(--dark-shadow-lg);
+}
+
+body.dark-mode .modal-body h3 {
+    color: var(--dark-accent);
+}
+
+body.dark-mode .modal-body h3::after {
+    background-color: var(--dark-primary-light);
+}
+
+body.dark-mode .modal-body form input {
+    background-color: #333333;
+    color: var(--dark-text-primary);
+    border-color: var(--dark-accent);
+}
+
+body.dark-mode .modal-body form input:focus {
+    border-color: var(--dark-accent);
+    box-shadow: 0 0 0 3px rgba(128, 203, 196, 0.3);
+    background-color: #424242; /* Mantener fondo oscuro al enfocar */
+    color: var(--dark-text-primary); /* Asegurar texto legible al enfocar */
+}
+
+body.dark-mode .modal-body form button {
+    background: var(--dark-accent);
+    color: var(--dark-background);
+}
+
+body.dark-mode .modal-body form button:hover {
+    background: #4DB6AC; /* Un tono más oscuro del acento al hacer hover */
+    box-shadow: var(--dark-shadow-lg);
+}
+
+/* =====================================================
+    DROPDOWN MENÚS (Basado en tu CSS)
+==================================================== */
+body.dark-mode .dropdown-menu {
+    background: var(--dark-card-bg);
+    border-color: var(--dark-border-light);
+    box-shadow: var(--dark-shadow-md);
+}
+
+body.dark-mode .dropdown-menu button {
+    color: var(--dark-text-primary);
+}
+
+body.dark-mode .dropdown-menu button::before {
+    background-color: var(--dark-accent);
+}
+
+body.dark-mode .dropdown-menu button:hover {
+    background: #333333;
+    color: var(--dark-accent);
+}
+
+/* =====================================================
+    TOAST NOTIFICATIONS (Basado en tu CSS)
+==================================================== */
+body.dark-mode .toast {
+    background: var(--dark-accent);
+    color: var(--dark-background);
+    box-shadow: var(--dark-shadow-sm);
+}
+
+/* =====================================================
+    ESTILOS ADICIONALES Y RESPONSIVOS (Basado en tu CSS)
+==================================================== */
+body.dark-mode #sectionModalBody button {
+    background: var(--dark-accent);
+    color: var(--dark-background);
+}
+
+body.dark-mode #sectionModalBody button:hover {
+    background: #4DB6AC; /* Un tono más oscuro del acento al hacer hover */
+    box-shadow: var(--dark-shadow-lg);
+}
+
+/* Efecto de brillo para elementos activos (ajustar color si es necesario) */
+@keyframes pulse-dark {
+    0% { box-shadow: 0 0 0 0 rgba(128, 203, 196, 0.5); }
+    70% { box-shadow: 0 0 0 15px rgba(128, 203, 196, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(128, 203, 196, 0); }
+}
+
+body.dark-mode .active-item {
+    animation: pulse-dark 1.5s infinite;
+}
+
+/* Hover cards con efecto 3D (no es necesario modificar mucho aquí) */
+
+/* Efecto de card glow (ajustar color si es necesario) */
+body.dark-mode .glow-on-hover::after {
+    background: radial-gradient(circle at center, rgba(128, 203, 196, 0.6) 0%, rgba(30, 30, 30, 0) 70%);
+}
+
+/* Ajustes para móviles */
+@media (max-width: 768px) {
+    body.dark-mode .sidebar {
+        background: rgba(30, 30, 30, 0.96); /* Fondo oscuro semitransparente */
+        border-top-color: var(--dark-border-light);
+    }
+}
+
+/* Para pantallas de móviles y tablets (máximo 768px) */
+@media (max-width: 768px) {
+    /* No se requieren cambios específicos para dark mode en este bloque, ya que son ajustes de layout */
+}
+
+/* ===============================
+    Estilos para dispositivos móviles
+    =============================== */
+
+/* Para pantallas muy pequeñas (máximo 480px) */
+@media (max-width: 480px) {
+    /* Ajustes de tipografía y espaciado ya manejados por el CSS base y las reglas generales de dark mode */
+}
+
+/* =====================================================
+    ESTILOS PARA LA VISTA DE CONFIGURACIÓN (Basado en tu CSS)
+==================================================== */
+body.dark-mode .settings-form {
+    background: var(--dark-card-bg);
+    box-shadow: var(--dark-shadow-md);
+    border-color: var(--dark-border-light);
+}
+
+body.dark-mode .settings-form:hover {
+    box-shadow: var(--dark-shadow-lg);
+}
+
+body.dark-mode .settings-form::before {
+    background: linear-gradient(90deg, var(--dark-primary-light) 0%, var(--dark-accent) 100%);
+}
+
+body.dark-mode .settings-form h2 {
+    color: var(--dark-accent);
+}
+
+body.dark-mode .settings-form h2::after {
+    background-color: var(--dark-primary-light);
+}
+
+body.dark-mode .settings-form label {
+    color: var(--dark-primary-light);
+}
+
+body.dark-mode .settings-form .form-group:focus-within label {
+    color: var(--dark-accent);
+}
+
+body.dark-mode .settings-form input {
+    background-color: #333333;
+    color: var(--dark-text-primary);
+    border-color: var(--dark-accent);
+}
+
+body.dark-mode .settings-form input:focus {
+    border-color: var(--dark-accent);
+    box-shadow: 0 0 0 3px rgba(128, 203, 196, 0.3);
+    background-color: #424242; /* Mantener fondo oscuro al enfocar */
+    color: var(--dark-text-primary); /* Asegurar texto legible al enfocar */
+}
+
+body.dark-mode .settings-form button {
+    background: var(--dark-accent);
+    color: var(--dark-background);
+}
+
+body.dark-mode .settings-form button:hover {
+    background: #4DB6AC; /* Un tono más oscuro del acento al hacer hover */
+    box-shadow: var(--dark-shadow-lg);
+}
+
+/* =====================================================
+    ESTILOS ESPECÍFICOS PARA LOS PROBLEMAS REPORTADOS
+==================================================== */
+/* Botón presionado */
+body.dark-mode button:active {
+    background-color: var(--dark-primary-dark); /* Un tono más oscuro al presionar */
+    color: var(--dark-text-primary);
+}
+
+body.dark-mode .modal-body form button:active {
+    background-color: var(--dark-primary-dark);
+    color: var(--dark-text-primary);
+}
+
+body.dark-mode #sectionModalBody button:active {
+    background-color: var(--dark-primary-dark);
+    color: var(--dark-text-primary);
+}
+
+/* "section details" */
+body.dark-mode .section-detail {
+    /* Ya estilado arriba, asegurándose que el fondo no sea blanco */
+}
+
+/* "class content" */
+body.dark-mode .class-content {
+    background-color: var(--dark-card-bg); /* Asegurar un fondo oscuro */
+    padding: 18px; /* Mantener el padding */
+}
+
+/* Ajuste para el botón en teléfono (revisar y ajustar más si es necesario) */
+@media (max-width: 600px) {
+    body.dark-mode .header-right button {
+        padding: 10px; /* Aumentar un poco el padding */
+        font-size: 1em; /* Asegurar que el tamaño de la fuente sea legible */
+    }
+    /* Si hay un botón específico que sigue sin verse, necesitarías inspeccionar su HTML y añadir un selector más específico aquí */
+}
+
+/* =====================================================
+    CORRECCIÓN PARA EL HOVER DEL SIDEBAR
+==================================================== */
+body.dark-mode .nav-item:hover {
+    background: var(--dark-nav-item-hover) !important; /* Color gris oscuro */
+    color: var(--dark-primary-light) !important;
+}
+
+body.dark-mode .nav-item.active {
+    background: var(--dark-primary-dark) !important; /* Un tono más oscuro para el activo */
+    color: var(--dark-text-primary) !important;
+}
+
+/* =====================================================
+    ESTILOS PARA CONTACT VIEW
+==================================================== */
+body.dark-mode .contacto-view {
+    background-color: var(--dark-card-bg); /* Usamos la variable de fondo oscuro */
+    border-radius: 18px;
+    padding: 40px; /* Coincide con el padding del modo blanco */
+    box-shadow: var(--dark-shadow-md); /* Usamos la variable de sombra oscura */
+    max-width: 600px; /* Coincide con el ancho máximo */
+    margin: 60px auto; /* Coincide con los márgenes */
+    border: 1px solid var(--dark-border-light); /* Usamos la variable de borde oscuro */
+}
+
+body.dark-mode .contacto-view h2 {
+    color: var(--dark-accent); /* Usamos la variable de color de acento oscuro */
+    margin-bottom: 30px; /* Coincide con el margen inferior */
+    text-align: center;
+    font-size: 32px; /* Coincide con el tamaño de fuente */
+}
+
+body.dark-mode .contacto-view p {
+    color: var(--dark-text-secondary); /* Usamos la variable de color de texto secundario oscuro */
+    text-align: center;
+    margin-bottom: 30px; /* Coincide con el margen inferior */
+    font-size: 18px; /* Coincide con el tamaño de fuente */
+}
+
+body.dark-mode .contacto-view .form-group {
+    margin-bottom: 25px; /* Coincide con el margen inferior */
+}
+
+body.dark-mode .contacto-view .form-group label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 10px; /* Coincide con el margen inferior */
+    color: var(--dark-primary-light); /* Usamos la variable de color primario claro oscuro */
+    font-size: 18px; /* Coincide con el tamaño de fuente */
+}
+
+body.dark-mode .contacto-view .form-group input,
+body.dark-mode .contacto-view .form-group textarea {
+    width: 100%;
+    padding: 14px 20px; /* Coincide con el padding */
+    border: 2px solid var(--dark-accent); /* Usamos la variable de color de acento oscuro para el borde */
+    border-radius: 12px; /* Coincide con el radio de borde */
+    font-size: 18px; /* Coincide con el tamaño de fuente */
+    background-color: #333333; /* Gris oscuro para el fondo */
+    color: var(--dark-text-primary); /* Usamos la variable de color de texto primario oscuro */
+    transition: border-color var(--transition-normal), box-shadow var(--transition-normal);
+}
+
+body.dark-mode .contacto-view .form-group input:focus,
+body.dark-mode .contacto-view .form-group textarea:focus {
+    outline: none;
+    border-color: var(--dark-accent); /* Usamos la variable de color de acento oscuro */
+    box-shadow: 0 0 0 5px rgba(128, 203, 196, 0.2); /* Sombra con el color del acento oscuro */
+    background-color: #424242; /* Un poco más claro al enfocar */
+}
+
+body.dark-mode .contacto-view button {
+    width: 100%;
+    padding: 16px; /* Coincide con el padding */
+    background-color: var(--dark-accent); /* Usamos la variable de color de acento oscuro */
+    color: var(--dark-background); /* Usamos la variable de color de fondo oscuro para el texto del botón */
+    border: none;
+    border-radius: 12px; /* Coincide con el radio de borde */
+    font-size: 18px; /* Coincide con el tamaño de fuente */
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color var(--transition-normal), transform var(--transition-normal), box-shadow var(--transition-normal);
+    margin-top: 20px; /* Coincide con el margen superior */
+}
+
+body.dark-mode .contacto-view button:hover {
+    background-color: #4DB6AC; /* Un tono más oscuro del acento */
+    transform: translateY(-4px);
+    box-shadow: 0 6px 22px rgba(128, 203, 196, 0.4); /* Sombra con el color del acento oscuro */
+}
+
+/* Opcionales: mensajes de éxito y error */
+body.dark-mode .contacto-view .success-message,
+body.dark-mode .contacto-view .error-message {
+    text-align: center;
+    padding: 14px; /* Coincide con el padding */
+    border-radius: 10px; /* Coincide con el radio de borde */
+    margin-top: 20px; /* Coincide con el margen superior */
+    font-size: 17px; /* Coincide con el tamaño de fuente */
+    font-weight: 500;
+}
+
+body.dark-mode .contacto-view .success-message {
+    background-color: var(--dark-accent); /* Usamos la variable de color de acento oscuro */
+    color: var(--dark-background); /* Usamos la variable de color de fondo oscuro */
+}
+
+body.dark-mode .contacto-view .error-message {
+    background-color: #e74c3c; /* Mantenemos el color rojo para el error */
+    color: var(--dark-text-primary); /* Usamos la variable de color de texto primario oscuro */
+}
+
+
+body.dark-mode .creador-card {
+    background-color: var(--dark-card-bg);
+    border-radius: 15px;
+    box-shadow: var(--dark-shadow-md);
+    border: 1px solid var(--dark-border-light);
+    width: calc(50% - 40px); /* Para mostrar dos tarjetas por fila en pantallas medianas y grandes */
+}
+
+body.dark-mode .creador-imagen {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 15px;
+    border: 2px solid var(--dark-primary-light); /* Un borde para destacar la imagen */
+}
+
+body.dark-mode .creador-nombre {
+    color: var(--dark-primary-light);
+    margin-bottom: 10px;
+    font-size: 22px;
+}
+
+body.dark-mode .creador-info {
+    color: var(--dark-text-secondary);
+    font-size: 16px;
+    line-height: 1.6;
+    text-align: left; /* Alinea el texto a la izquierda para mejor lectura */
+}
+
+
+
+/* Para pantallas muy pequeñas (máximo 480px) */
+@media (max-width: 480px) {
+    /* ... tus estilos actuales para pantallas muy pequeñas ... */
+
+    /* Estilos para el botón de modo claro/oscuro */
+    .theme-toggle-btn {
+        position: fixed; /* Para que se quede en una posición visible al hacer scroll */
+        top: 60px; /* Aumentamos aún más la distancia desde la parte superior para bajarlo */
+        right: 15px; /* Mantenemos o ajustamos la distancia desde la derecha según necesites */
+        z-index: 1000; /* Asegura que esté por encima de otros elementos */
+        background-color: var(--dark-card-bg); /* O un color que contraste */
+        color: var(--dark-text-primary);
+        border: 1px solid var(--dark-border-light);
+        padding: 10px;
+        border-radius: 8px;
+        cursor: pointer;
+        font-size: 14px; /* Ajusta el tamaño de la fuente si es necesario */
+    }
+
+    .theme-toggle-btn:hover {
+        background-color: var(--dark-primary-light);
+        color: var(--dark-background);
+    }
+}
+
+/* Para pantallas de móviles y tablets (máximo 768px) */
+@media (max-width: 768px) {
+    /* ... tus estilos actuales para pantallas de móviles y tablets ... */
+
+    /* Estilos para el botón de modo claro/oscuro (si es diferente para tablets) */
+    .theme-toggle-btn {
+        position: fixed; /* Para que se quede en una posición visible al hacer scroll */
+        top: 70px; /* Aumentamos aún más la distancia desde la parte superior para bajarlo */
+        right: 20px; /* Mantenemos o ajustamos la distancia desde la derecha según necesites */
+        z-index: 1000; /* Asegura que esté por encima de otros elementos */
+        background-color: var(--dark-card-bg); /* O un color que contraste */
+        color: var(--dark-text-primary);
+        border: 1px solid var(--dark-border-light);
+        padding: 12px;
+        border-radius: 8px;
+        cursor: pointer;
+        font-size: 16px; /* Ajusta el tamaño de la fuente si es necesario */
+    }
+
+    .theme-toggle-btn:hover {
+        background-color: var(--dark-primary-light);
+        color: var(--dark-background);
+    }
+}

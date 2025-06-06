@@ -1,18 +1,4 @@
-<?php
-echo "Hola";
-    session_start();
-    if (!isset($_SESSION["Id_Usuario"])){
-        echo '
-            <script>
-                alert("Por favor debes iniciar sesión");
-                window.location = "login_register.php";
-            </script>
-        ';
-        header('location: login_register.php');
-        session_destroy();
-        die(); 
-    }
-?>
+
 <!DOCTYPE html>
 <html lang="es">
 

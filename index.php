@@ -1,4 +1,5 @@
 <?php
+echo "Hola";
     session_start();
     if (!isset($_SESSION["Id_Usuario"])){
         echo '
